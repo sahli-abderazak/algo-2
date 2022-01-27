@@ -1,0 +1,19 @@
+ALGORITHM  cheakpoint lds4
+VAR
+    Set1, Set2 :HASH_TABLE<INTEGER,INTEGER>;
+    i,sum:INTEGER ;
+BEGIN
+sum:=0
+    FOR i FROM 0 TO Set1.length -1 STEP 1  DO
+    IF ( Set2.lookup(Set1[i]) =true) THEN
+       sum=sum+Set1[i];
+    END_IF
+    END_FOR
+    FOR i FROM 0 TO Set2.length -1 STEP 1  DO
+    IF ( set1.lookup(Set2[i]) =true) THEN
+       sum=sum+Set2[i];
+    END_IF
+    END_FOR
+    Write(sum);
+
+END

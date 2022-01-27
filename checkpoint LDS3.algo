@@ -1,0 +1,23 @@
+ALGORITHM checkpoint LDS3
+VAR
+    set1: ARRAY_OF integer [];
+    set2: ARRAY_OF intger [];
+    i,j,sum: INTEGER ;
+BEGIN
+sum:= 0 
+    FOR i FROM 0 TO set1 .length-1 step 1 DO
+    for j from 0 to set2 .length-1 step 1 DO     
+        IF (set1[i] = set2[j]) THEN
+         sum := sum +set1[i] ;
+        END_IF
+        END_FOR
+        END_FOR
+    FOR j FROM 0 TO set2 .length-1 step 1 DO
+    for i from 0 to set1 .length-1 step 1  DO     
+        IF (set1[i] = set2[j]) THEN
+         sum := sum +set2[i] ;
+        END_IF
+        END_FOR
+        END_FOR
+   write (sum);     
+END

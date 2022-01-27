@@ -1,0 +1,25 @@
+ALGORITHM checkpoint LDS1
+VAR
+    set_1: ARRAY_OF integer [];
+    set_2: ARRAY_OF intger [];
+    i : INTEGER ;
+    j : INTEGER ;
+    sum : INTEGER ;
+BEGIN
+sum:= 0 
+    FOR i FROM 0 TO set_1 .length-1  DO
+    for j from 0 to set_2 .length-1  DO     
+        IF (set_1[i] <> set_2[j]) THEN
+         sum := sum +set_1[i] ;
+        END_IF
+        END_FOR
+        END_FOR
+    FOR j FROM 0 TO set_2 .length-1  DO
+    for i from 0 to set_1 .length-1  DO     
+        IF (set_2[j] <> set_1[i]) THEN
+         sum := sum +set_2[j] ;
+        END_IF
+        END_FOR
+        END_FOR
+   write (sum );     
+END
